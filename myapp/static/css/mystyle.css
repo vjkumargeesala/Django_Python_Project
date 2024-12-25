@@ -1,0 +1,27 @@
+{% load static %}
+body{
+ background-color: orange;
+ text-align: center;
+ background-image: url('/static/images/web.png');
+}
+h1{
+ color: skyblue;
+ font-family:'Times New Roman';
+}
+p{
+	color: skyblue;
+	font-family:'Times New Roman';
+}
+h2{
+	color: skyblue;
+	font-family:'Times New Roman';
+
+}
+h3{
+	color: skyblue;
+	font-family: 'Times New Roman';
+}
+img{
+ width: 140px;
+ height: 200px;
+}

@@ -1,0 +1,35 @@
+{% extends 'myapp/index.html'%}
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Result page</title>
+</head>
+<body>
+	<br><br><br>
+	<div align="center">
+		<a href="{% url 'poll_q' %}"> <h2>Poll_Question</h2></a>
+	</div>
+	<div align="center">
+		
+		{% if j == "Yes/No" %}
+		<h1>Final Result </h1>
+		<a href="{% url 'view' data.i %}"><h2>YES:{{data.Yes}}</h2></a>
+		<a href="{% url 'view' data.j %}"><h2>NO:{{data.No}}</h2></a>
+		<a href="https://vjproject.herokuapp.com/poll/y/">Copy link address</a>		
+		{% endif %}
+		{% if j == "Rating" %}
+		<h1>Final Result </h1>
+		<a href="{% url 'ansorrate' j %}">Click here</a><br><br>
+		<a href="https://vjproject.herokuapp.com/poll/r/">Copy link address</a>
+		{% endif %}
+		{% if j == "Answer" %}
+		<h1>Final Result </h1>
+		<a href="{% url 'ansorrate' j %}">Click here</a><br><br>
+		<a href="https://vjproject.herokuapp.com/poll/a/">Copy link address</a>
+		{% endif %}
+	</div>
+	
+</body>
+</html>
+{% endblock content%}

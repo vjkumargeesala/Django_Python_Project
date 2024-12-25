@@ -1,0 +1,39 @@
+{% extends 'myapp/index.html'%}
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Report Page</title>
+</head>
+<body>
+	<center>
+	<br><br>
+	<h2>Report📂</h2>
+	<br><br>
+	{% if k == "critical" %}
+    <h1>PLEASE VISIT THE NEAREST HOSPITAL AND HAVE PROPER COVID TEST!!</h1>
+	<p>Seek immediate medical care if you have difficulty breathing or pain/pressure in the chest. If possible, call your health care provider in advance, so he/she can direct you to the right health facility Please do have proper medication as immediately as possible</p>
+	<br><br>
+	{% endif %}
+	{% if k == "high" %}
+	<p>If you have minor symptoms, such as a slight cough or a mild fever, there is generally no need to seek medical care. Stay at home, self-isolate and monitor your symptoms. Follow national guidance on self-isolation self-isolation, it is because he/she is ill but not severely ill (requiring medical attention)have a large, well-ventilated with hand-hygiene and toilet facilitiesIf this is not possible, place beds at least 1 metre apart Keep at least 1 metre from others, even from your family members Monitor your symptoms daily Isolate for 14 days, even if you feel healthy If you develop difficulty breathing, contact your healthcare provider immediately – call them first if possible Stay positive and energized by keeping in touch with loved ones by phone or online, and by exercising yourself at home.</p>
+	<br><br>
+	{% endif %}
+	{% if k == "starting" %}
+	People with mild symptoms who are otherwise healthy should manage their symptoms at home. On average it takes 5–6 days from when someone is infected with the virus for symptoms to show, however it can take up to 14 days
+	<h3>SElF CARE</h3>
+	<p>If you feel sick you should rest, drink plenty of fluid, and eat nutritious food. Stay in a separate room from other family members, and use a dedicated bathroom if possible. Clean and disinfect frequently touched surfaces. Everyone should keep a healthy lifestyle at home. Maintain a healthy diet, sleep, stay active, and make social contact with loved ones through the phone or internet. Children need extra love and attention from adults during difficult times. Keep to regular routines and schedules as much as possible. It is normal to feel sad, stressed, or confused during a crisis. Talking to people you trust, such as friends and family, can help. If you feel overwhelmed, talk to a health worker or counsellor.</p>
+	less<br><br>
+	{% endif %}
+	{% if k == "None" %}
+	<p>Upto now your were healthy </p>
+	<p>Stay home Stay safe</p>
+	<br><br>
+	{% endif %}
+
+	<a href="{% url 'covid_func' %}">Home</a>
+	</center>
+</center>
+</body>
+</html>
+{% endblock content%}

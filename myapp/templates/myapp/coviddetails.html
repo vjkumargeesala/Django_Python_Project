@@ -1,0 +1,20 @@
+{% extends 'myapp/index.html'%}
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Covid Details page</title>
+</head>
+	<div align="center">
+	<form action="{% url 'covid_func' %}" method="POST">
+		{% csrf_token %}
+		<br>
+		<br>
+		<br>
+		<h1>Fill these details📝</h1>
+		{{form.as_p}}
+		<input type="submit" value="Upload">
+	</form>
+	</div>
+</html>
+{% endblock content%}

@@ -1,0 +1,32 @@
+{% extends 'myapp/index.html'%}
+{% block content %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>About</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/mystyle.css' %}">
+</head>
+<body>
+<br>
+<img src="{% static 'images/mine.jpg' %}" alt="img" height="200px" width="140px"><br>
+<br>
+<p>
+Hello! Myself Vijay kumar, creator of this web page and host of this page. I'm a BTech Student completing my 4th year in <a href="https://pragati.ac.in/">Pragati Engineering College</a> in a EEE stream, kakinada. </p>
+<h3>About Page</h3>
+<p>This Page is a Demo project for exhibiting my skills in web development and you can see a polling options if your logged in then you poll questions among your buddies or if you a class representative it will help you in certain tasks.After that you can only see the results as you were logged in and the link which has to be shared among your fellow friends/classmates will provided in results page . and you can also clearly see you answered particularly according to question type you have choosen.
+</p>
+<h3>About Covid Consultancy</h3>
+<p>
+	In this you can see important information about COVID-19 and how it spreads and how to prevent it. 
+	And you check into which category will has be consider your self on bases of your symptoms and your condition is critical then your
+	reports will sent to authorised doctors and we will get back to you with a medicitioins you have follow.
+</p>
+<br>
+<h2>Reach me out</h2>
+Emailid : gvk4352@gmail.com     
+<br><a href="https://www.linkedin.com/in/vijay-kumar-916257194/">Linkedln</a> 
+<br><a href="{% url 'home' %}">Home</a>
+</body>
+</html>
+{% endblock content%}

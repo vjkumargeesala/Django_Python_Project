@@ -1,0 +1,20 @@
+{% extends 'myapp/index.html'%}
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Poll page</title>
+</head>
+	<div align="center">
+	<form action="{% url 'poll_q' %}" method="POST">
+		{% csrf_token %}
+		<br>
+		<br>
+		<br>
+		<h1>Post Your Question</h1>
+		{{form.as_p}}
+		<input type="submit" value="Upload">
+	</form>
+	</div>
+</html>
+{% endblock content%}

@@ -1,0 +1,36 @@
+{% extends 'myapp/index.html'%}
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Submit page</title>
+</head>
+<body>
+		<div align="center">
+			<h1>Choose Your Option</h1>
+			<h1>{{data}}</h1>
+			{% if k == "Yes/No" %}
+			<form action="{% url 'submit' %}" method="POST">
+				{% csrf_token %}
+				{{form.as_p}}
+				  <input type="submit" value="Submit">
+			</form>
+			{% endif %}
+			{% if k == "Rating" %}
+				<form action="{% url 'rating' %}" method="POST">
+				{% csrf_token %}
+				{{form.as_p}}
+				  <input type="submit" value="Submit">
+			</form>
+			{% endif %}
+			{% if k == "Answer" %}
+			<form action="{% url 'ans' %}" method="POST">
+				{% csrf_token %}
+				{{form.as_p}}
+				  <input type="submit" value="Submit">
+			</form>
+			{% endif %}
+		</div>
+</body>
+</html>
+{% endblock content%}

@@ -1,0 +1,69 @@
+{% extends 'myapp/index.html'%}
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Answer page</title>
+</head>
+<body>
+	<center>
+		<br>
+		<br>
+	<h3>Details</h3>
+	{% if i == 't' %}
+	<table cellpadding="5" width="25%" >
+		<tr>
+			
+				<th><h4>S.no</h4></th>
+				<th><h4>Name</h4></th>
+				<th><h4>Option</h4></th>
+		</tr>
+		{% for j in data %}
+		<tr>
+			<td><h5>{{forloop.counter}}</h5></td>
+			<td><h5>{{j.name}}</h5></td>
+			<td><h5>{{j.opt}}</h5></td>
+		</tr>
+		{% endfor %}
+	</table>
+	{% endif %}
+	{% if i == "ans" %}
+	<table cellpadding="5" width="25%" >
+		<tr>
+			
+				<th><h4>S.no</h4></th>
+				<th><h4>Name</h4></th>
+				<th><h4>Answer</h4></th>
+		</tr>
+		{% for j in data %}
+		<tr>
+			<td><h5>{{forloop.counter}}</h5></td>
+			<td><h5>{{j.name}}</h5></td>
+			<td><h5>{{j.answer}}</h5></td>
+		</tr>
+		{% endfor %}
+	</table>
+	{% endif %}
+	{% if i == "rat" %}
+	<table cellpadding="5" width="25%" >
+		<tr>
+			
+				<th><h4>S.no</h4></th>
+				<th><h4>Name</h4></th>
+				<th><h4>Rating</h4></th>
+		</tr>
+		{% for j in data %}
+		<tr>
+			<td><h5>{{forloop.counter}}</h5></td>
+			<td><h5>{{j.name}}</h5></td>
+			<td><h5>{{j.rating}}</h5></td>
+		</tr>
+		{% endfor %}
+	</table>
+	{% endif %}	
+
+	<a href="{% url 'admin_page' %}">Back</a>
+</center>
+</body>
+</html>
+{% endblock content%}
